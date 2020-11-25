@@ -1,6 +1,6 @@
-# Authors: Vuk Radovic, Laura Gutierrez Funderburk
+# Authors: Vuk Radovic, Laura Gutierrez Funderburk, Lisa Cao
 # Created on: Nov 8 2020
-# Last modified on: Nov 12 2020
+# Last modified on: Nov 25 2020
 
 """This script obtains a list of ports from a Cisco switch"""
 
@@ -81,7 +81,12 @@ if __name__ == "__main__":
         # Close device
         device.close()
     
+        # Generate dataframes 
         interfaces_df = pd.DataFrame.from_dict(json_interfaces)
+        transp_inter = interfaces_df.T
+        devices_df = pd.DataFrame.from_dict(json_devices)
+        facts_df = pd.DataFrame.from_dict(json_facts)
+        
         # Get list of ports
         print("------------------------------------------------")
         print("List of ports:")
