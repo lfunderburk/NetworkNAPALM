@@ -8,7 +8,7 @@ from napalm import get_network_driver
 import json
 import pandas as pd
 import argparse                 
-
+from tabulate import *
 
 def getArguments():
     # Set up the command line parser
@@ -90,16 +90,16 @@ if __name__ == "__main__":
 
         print("------------------------------------------------")
         print("Model, vendor for each port")
-        display(facts_df[['model','vendor','interface_list']])
+        print(tabulate(facts_df[['model','vendor','interface_list']], tablefmt="fancygrid"))
         
         print("------------------------------------------------")
         print("Other info:")
         print("Ports enabled and up")
-        display(transp_inter[(transp_inter['is_enabled']==True) & (transp_inter['is_up']==True)])
+        print(tabulate(transp_inter[(transp_inter['is_enabled']==True) & (transp_inter['is_up']==True)], tablefmt="fancygrid"))
         
         print("------------------------------------------------")
         print("Ports not enabled or")    
-        display(transp_inter[(transp_inter['is_enabled']!=True) | (transp_inter['is_up']!=True)])
+        print(tabulate(transp_inter[(transp_inter['is_enabled']!=True) | (transp_inter['is_up']!=True)], tablefmt="fancygrid"))
         
         print("Users")
         if not(users):
