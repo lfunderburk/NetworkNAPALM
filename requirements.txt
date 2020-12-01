@@ -3,3 +3,5 @@ pandas==1.0.3
 json5==0.8.5
 jsonschema==3.2.0
 numpy==1.17.4
+ansible==2.10.3
+napalm-ansible==1.1.0

@@ -1,0 +1,12 @@
+[switches:children]
+ios
+
+[ios]
+172.22.5.7
+
+[ios:vars]
+ansible_connection=ansible.netcommon.network_cli
+ansible_become=yes
+ansible_become_method=enable
+ansible_network_os=ios
+ansible_python_interpreter=<path/to/project/directory>/NetworkNAPALM/env/bin/python3
