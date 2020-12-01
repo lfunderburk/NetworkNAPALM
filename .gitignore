@@ -3,3 +3,6 @@
 
 # Environment Folder
 env
+
+# Netbox Docker
+netbox-docker
