@@ -1,0 +1,5 @@
+# MacOS Directory Services
+.DS_Store
+
+# Environment Folder
+env
