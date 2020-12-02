@@ -20,7 +20,7 @@ Make sure to be connected to the Cybera VPN
 
 #### Q1)
 
-In this challenge we wrote a python script `parsing_ports.py` that takes as input: the IP address, user name and password associated to the port. 
+In this challenge we wrote a python script `scripts/parsing_ports.py` that takes as input: the IP address, user name and password associated to the port. 
 
     usage: parsing_ports.py [-h] [-v] host_name username password
 
@@ -55,7 +55,9 @@ Set the environment variable `$ export ANSIBLE_HOST_KEY_CHECKING=False`
 Enter the `q2` directory and run `$ ansible-playbook -i inventory.yml facts-demo.yml --extra-vars "ansible_user=<username> ansible_password=<password>"`
 
 #### Q3)
-##### How to set up and acess Netbox:  
+##### How to set up and acess NetBox:  
+
+We will use a Docker image for NetBox 
 1. `$ git clone https://github.com/netbox-community/netbox-docker.git` to download the netbox-docker files
 2. `cd netbox-docker`
 3. `$ vim env/netbox.env`  
