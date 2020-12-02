@@ -1,0 +1,8 @@
+# MacOS Directory Services
+.DS_Store
+
+# Environment Folder
+env
+
+# Netbox Docker
+netbox-docker

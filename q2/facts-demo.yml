@@ -1,0 +1,11 @@
+- name: "Demonstrate connecting to switches"
+  hosts: switches
+  gather_facts: no
+
+  tasks:
+    - name: napalm get_facts
+      napalm_get_facts:
+        filter: facts,interfaces
+
+    - debug:
+        var: napalm_facts
