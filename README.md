@@ -18,6 +18,23 @@ To activate the environment, source the environment `$ . env/bin/activate`
 ### How to Run
 Make sure to be connected to the Cybera VPN
 
+#### Q1)
+
+In this challenge we wrote a python script `parsing_ports.py` that takes as input: the IP address, user name and password associated to the port. 
+
+    usage: parsing_ports.py [-h] [-v] host_name username password
+
+    positional arguments:
+      host_name      Provide IP address or host name of switch
+      username       Provide username of switch
+      password       Provide password of switch
+
+    optional arguments:
+      -h, --help     show this help message and exit
+      -v, --verbose  Run the program in verbose mode.
+      
+The python script will return: a list of ports associated with the switch, along with information on the switch such as the vendor and model. 
+
 #### Q2)
 Make sure to activate the environment
 
