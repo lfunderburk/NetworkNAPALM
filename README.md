@@ -87,5 +87,5 @@ If Netbox is not ready yet, you'll receive a `502 Bad Gateway` error
 9. Create a `IP Address` using the the remote devices address. Under the "Interface Assignment" header, make sure to select the Device and Interface you created earlier
 10. Edit your existing device and update it with a primary ip address
 11. Query 
-`http://0.0.0.0:<PORT>/api/dcim/devices/<DEVICE_NUM>/napalm/?X-NAPALM-Username=<USERNAME>&X-NAPALM-Password=<PASSWORD>method=get_facts`
+`http://0.0.0.0:<PORT>/api/dcim/devices/<DEVICE_NUM>/napalm/?X-NAPALM-Username=<USERNAME>&X-NAPALM-Password=<PASSWORD>&method=get_facts`
 
